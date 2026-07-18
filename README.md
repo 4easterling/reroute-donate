@@ -1,8 +1,8 @@
 # reroute-donate
 
-Static "support / tip jar" page for [Reroute](https://github.com/4easterling/reroute),
+Static "support / tip jar" page for [Re Route](https://github.com/4easterling/reroute),
 the Apple Maps → Google Maps link converter. Hosted on GitHub Pages and linked from
-the app's main screen.
+the Re Route app's main screen.
 
 ## How it works
 
