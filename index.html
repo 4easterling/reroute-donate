@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Reroute</title>
+  <meta name="description" content="Tip the developer of Reroute — the Apple Maps to Google Maps link converter." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #FBFDFB;
+      --card: #FFFFFF;
+      --border: #DBE4DD;
+      --text: #16201B;
+      --text-2: #5D6B62;
+      --muted: #9AA39B;
+      --accent-a: #137A4F;
+      --accent-b: #1CA066;
+      --on-accent: #FFFFFF;
+      --shadow: 0 10px 40px rgba(19, 122, 79, 0.10);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0E1512;
+        --card: #161F1A;
+        --border: #2B3A32;
+        --text: #E9F1EC;
+        --text-2: #93A39A;
+        --muted: #6F7E76;
+        --accent-a: #1AA564;
+        --accent-b: #25C47B;
+        --on-accent: #06140D;
+        --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 40px 32px 28px;
+      text-align: center;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 28px;
+    }
+    .badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+      color: var(--on-accent);
+      font-size: 21px;
+      display: grid;
+      place-items: center;
+    }
+    .brand-name {
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+    h1 {
+      font-size: 27px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    p.sub {
+      color: var(--text-2);
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0 auto 28px;
+      max-width: 320px;
+    }
+    .donate {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+      color: var(--on-accent);
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.06s ease, filter 0.15s ease;
+    }
+    .donate:hover { filter: brightness(1.05); }
+    .donate:active { transform: translateY(1px); }
+    .note {
+      color: var(--muted);
+      font-size: 12.5px;
+      margin: 14px 0 0;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .footer a { color: var(--text-2); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">
+      <div class="badge" aria-hidden="true">⇄</div>
+      <div class="brand-name">Reroute</div>
+    </div>
+
+    <h1>Enjoying Reroute?</h1>
+    <p class="sub">
+      Reroute is free and has no ads. If it's saved you a few taps, a small tip
+      helps keep it maintained and updated.
+    </p>
+
+    <!--
+      SWAP TEST → LIVE HERE.
+      This href points at a Stripe Payment Link. It is currently a TEST-mode link
+      (donate.stripe.com/test_...), which only accepts Stripe test cards.
+      Before going live: create a live-mode payment link and replace the URL below.
+      The app links to THIS page's URL, so swapping here needs no app update.
+    -->
+    <a class="donate" href="https://donate.stripe.com/test_8x2eV56eWfdKcH812J2Ry00">
+      Leave a tip
+    </a>
+    <p class="note">Pay what you want · Secure checkout by Stripe</p>
+
+    <div class="footer">
+      Reroute converts Apple Maps links to Google Maps.<br />
+      Not affiliated with or endorsed by Apple or Google.
+    </div>
+  </main>
+</body>
+</html>
