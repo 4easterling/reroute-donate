@@ -11,17 +11,16 @@ donate button that opens a **Stripe Payment Link**. The Reroute app links to thi
 page's Pages URL, so the payment target can be changed here without shipping an app
 update.
 
-## Going live (test → live)
+## Payment target (live)
 
-The donate button currently points at a **test-mode** Stripe Payment Link
-(`donate.stripe.com/test_...`), which only accepts [Stripe test cards](https://docs.stripe.com/testing).
+The donate button points at a **live-mode** Stripe Payment Link
+(`donate.stripe.com/...`, no `test_`), so it accepts real payments. It's a
+pay-what-you-want tip ($1 minimum, $3 preset) on the Field Wright live account:
 
-To accept real payments:
+- Payment Link: `plink_1Tuj8K0dF6CIEMdPH5AUu4in`
+- Price: `price_1Tuj7z0dF6CIEMdPDeEuNAka` (custom amount)
+- Product: `prod_UuYEozMLDLfKnW` ("Re Route tip")
 
-1. In the Stripe Dashboard (live mode), recreate the product + pay-what-you-want price
-   and a Payment Link (`submit_type=donate`).
-2. Replace the `href` on the `.donate` link in `index.html` with the live URL
-   (`donate.stripe.com/...`, no `test_`).
-3. Commit — GitHub Pages redeploys automatically.
-
-No change to the Reroute app is needed.
+To change the target, create a new live Payment Link (`submit_type=donate`) and
+replace the `href` on the `.donate` link in `index.html`, then commit — GitHub Pages
+redeploys automatically. No change to the Reroute app is needed.
